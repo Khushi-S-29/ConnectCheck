@@ -4,7 +4,6 @@ import instaloader
 app = Flask(__name__)
 
 def login_instagram(username, password):
-    """Login to Instagram and return a loader and profile instance."""
     loader = instaloader.Instaloader()
     try:
         loader.login(username, password)
@@ -15,15 +14,12 @@ def login_instagram(username, password):
         return None, None
 
 def get_followers(profile):
-    """Fetch followers of the logged-in user."""
     return set(profile.get_followers())
 
 def get_following(profile):
-    """Fetch followings of the logged-in user."""
     return set(profile.get_followees())
 
 def find_non_followers(followers, following):
-    """Find users who don't follow back."""
     return following - followers
 
 @app.route('/', methods=['GET', 'POST'])
