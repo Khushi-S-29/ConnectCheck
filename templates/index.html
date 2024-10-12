@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Follower Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>FairFollow - Instagram Follower Tracker</h1>
+        <form method="POST">
+            <div>
+                <label for="username">Instagram Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label for="password">Instagram Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button type="submit">Check Non-Followers</button>
+        </form>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if non_followers %}
+            <h2>People who don't follow you back:</h2>
+            <ul>
+                {% for user in non_followers %}
+                    <li>{{ user }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No one to display or all users follow you back!</p>
+        {% endif %}
+    </div>
+</body>
+</html>
