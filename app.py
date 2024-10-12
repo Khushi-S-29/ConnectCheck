@@ -2,16 +2,21 @@ from flask import Flask, render_template, request
 import instaloader
 
 app = Flask(__name__)
-
 def login_instagram(username, password):
     loader = instaloader.Instaloader()
     try:
         loader.login(username, password)
         profile = instaloader.Profile.from_username(loader.context, username)
+        print(f"Logged in as: {profile.username}")
         return loader, profile
+    except instaloader.exceptions.BadCredentialsException:
+        print("Invalid username or password.")
+    except instaloader.exceptions.TwoFactorAuthRequiredException:
+        print("Two-factor authentication is required.")
+    except instaloader.exceptions.ConnectionException:
+        print("Connection error. Please check your internet connection.")
     except Exception as e:
         print(f"Login failed: {e}")
-        return None, None
 
 def get_followers(profile):
     return set(profile.get_followers())
