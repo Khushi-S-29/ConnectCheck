@@ -11,8 +11,8 @@ This **Instagram Follower Tracker** is a mini fun project that helps you find ou
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/instagram-follower-tracker.git
-   cd instagram-follower-tracker
+   git clone https://github.com/Khushi-S-29/FairFollow.git
+   cd FairFollow
 2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
