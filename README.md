@@ -3,12 +3,6 @@
 ## Overview
 This **Instagram Follower Tracker** is a mini fun project that helps you find out who’s not following you back on Instagram. With a user-friendly interface, you can easily log in to your Instagram account and see the list of users you follow who don't follow you back.
 
-## Features
-- Easy login using your Instagram credentials
-- Real-time follower check to see who’s not following you back
-- Simple and interactive dashboard
-- Fun graphics for an engaging user experience
-
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Python with Flask
