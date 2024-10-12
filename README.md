@@ -1,4 +1,4 @@
-# FairFollow - Instagram Follower Tracker
+# ConnectCheck - Instagram Follower Tracker
 
 ## Overview
 This **Instagram Follower Tracker** is a mini fun project that helps you find out who’s not following you back on Instagram. With a user-friendly interface, you can easily log in to your Instagram account and see the list of users you follow who don't follow you back.
@@ -11,8 +11,8 @@ This **Instagram Follower Tracker** is a mini fun project that helps you find ou
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Khushi-S-29/FairFollow.git
-   cd FairFollow
+   git clone https://github.com/Khushi-S-29/ConnectCheck.git
+   cd ConnectCheck
 2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
